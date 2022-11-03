@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6efd1a9509.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/template.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <title>Household</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="flexY">
+            <div id="top" class="flexX">
+                <div id="left-top" class="flexX">
+                    <span>About</span>
+                    <span>Customer Support</span>
+                </div>
+                <div id="right-top" class="flexX">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Login</span>
+                </div>
+            </div>
+            <div id="mid" class="flexX">
+                <a href="index.html"><img id="logo" src="img/logo.png" alt="" srcset=""></a>
+                <div class="search">
+                    <input type="text" id=search-product placeholder="search product">
+                    <button class="btn" type="submit">Search</button>
+                </div>
+                <div id="right-mid">
+                    <i class="fa-sharp fa-solid fa-location-dot"></i>
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count">0</span>
+                </div>
+            </div>
+        </header>
+        <nav id="nav" class="flexX">
+            <div class="nav-item"><a href="index.html">Deals</a> </div>
+            <div class="nav-item"> <a href="food.html">Food</a></div>
+            <div class="nav-item"><a href="beverages.html">Beverages</a></div>
+            <div class="nav-item"><a href="household.html">Household</a></div>
+            <div class="nav-item"><a href="personalcare.html">Personal Care</a></div>
+            <div class="nav-item"><a >Most Popular</a></div>
+            <div class="nav-item"><a >My Order</a></div>
+        </nav>
+
+        <section id="content" class="m-auto">
+            <div id="filter" class="flexY">
+                <div id="filter-child">
+                    <span>Filter:</span>
+                    <div onclick='show_product("home_kitchen")'>Home & Kitchen</div>
+                    <div onclick='show_product("cleaning_supplies")'>Cleaning Supplies</div>
+                    <div style="color: red; font-size:1.2rem;" onclick='show_product("product")'><b>Remove filter</b></div>
+                </div>
+            </div>
+            <div class="products flexX">
+                <!-- Home & Kitchen -->
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/jadhu.jpg" alt="this is image">
+                    <span class="product-name">Scotch Brite-Broom / jhadu</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/floor_cleaner.jpg" alt="this is image">
+                    <span class="product-name">Domex Disinfectant</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/lamp.jpg" alt="this is image">
+                    <span class="product-name">Lampshade Candle</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/doormat.jpg" alt="this is image">
+                    <span class="product-name">Microfiber Doormat</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/basket.jpg" alt="this is image">
+                    <span class="product-name">Basket</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/lighter.jpg" alt="this is image">
+                    <span class="product-name">Gas Lighter</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/masala.jpg" alt="this is image">
+                    <span class="product-name">MDH masala</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/cloth.jpg" alt="this is image">
+                    <span class="product-name">Fabric Kitchen cloth</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/wiper.jpg" alt="this is image">
+                    <span class="product-name">Kitchen Wiper</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/spoon.jpg" alt="this is image">
+                    <span class="product-name">Spoon set</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+
+                <!-- Cleaning Supplies -->
+                <div class="flexY product household cleaning_supplies">
+                    <img class="product-image" src="img/products/household/galamop.jpg" alt="this is image">
+                    <span class="product-name">Gala Mop</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household cleaning_supplies">
+                    <img class="product-image" src="img/products/household/sinkBrush.jpg" alt="this is image">
+                    <span class="product-name">Sink Brush</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household cleaning_supplies">
+                    <img class="product-image" src="img/products/household/wiper1.jpg" alt="this is image">
+                    <span class="product-name">Gala Wiper</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household cleaning_supplies">
+                    <img class="product-image" src="img/products/household/colin.jpg" alt="this is image">
+                    <span class="product-name">Colin Glass Cleaner</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household cleaning_supplies">
+                    <img class="product-image" src="img/products/household/dustbin.jpg" alt="this is image">
+                    <span class="product-name">Polyset Dustbin</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <!-- Home & Kitchen -->
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/jadhu.jpg" alt="this is image">
+                    <span class="product-name">Scotch Brite-Broom / jhadu</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/floor_cleaner.jpg" alt="this is image">
+                    <span class="product-name">Domex Disinfectant</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/lamp.jpg" alt="this is image">
+                    <span class="product-name">Lampshade Candle</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/doormat.jpg" alt="this is image">
+                    <span class="product-name">Microfiber Doormat</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/basket.jpg" alt="this is image">
+                    <span class="product-name">Basket</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/lighter.jpg" alt="this is image">
+                    <span class="product-name">Gas Lighter</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/masala.jpg" alt="this is image">
+                    <span class="product-name">MDH masala</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/cloth.jpg" alt="this is image">
+                    <span class="product-name">Fabric Kitchen cloth</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/wiper.jpg" alt="this is image">
+                    <span class="product-name">Kitchen Wiper</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/spoon.jpg" alt="this is image">
+                    <span class="product-name">Spoon set</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+
+                <!-- Cleaning Supplies -->
+                <div class="flexY product household cleaning_supplies">
+                    <img class="product-image" src="img/products/household/galamop.jpg" alt="this is image">
+                    <span class="product-name">Gala Mop</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household cleaning_supplies">
+                    <img class="product-image" src="img/products/household/sinkBrush.jpg" alt="this is image">
+                    <span class="product-name">Sink Brush</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household cleaning_supplies">
+                    <img class="product-image" src="img/products/household/wiper1.jpg" alt="this is image">
+                    <span class="product-name">Gala Wiper</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household cleaning_supplies">
+                    <img class="product-image" src="img/products/household/colin.jpg" alt="this is image">
+                    <span class="product-name">Colin Glass Cleaner</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household cleaning_supplies">
+                    <img class="product-image" src="img/products/household/dustbin.jpg" alt="this is image">
+                    <span class="product-name">Polyset Dustbin</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <!-- Home & Kitchen -->
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/jadhu.jpg" alt="this is image">
+                    <span class="product-name">Scotch Brite-Broom / jhadu</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/floor_cleaner.jpg" alt="this is image">
+                    <span class="product-name">Domex Disinfectant</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/lamp.jpg" alt="this is image">
+                    <span class="product-name">Lampshade Candle</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/doormat.jpg" alt="this is image">
+                    <span class="product-name">Microfiber Doormat</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/basket.jpg" alt="this is image">
+                    <span class="product-name">Basket</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/lighter.jpg" alt="this is image">
+                    <span class="product-name">Gas Lighter</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/masala.jpg" alt="this is image">
+                    <span class="product-name">MDH masala</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/cloth.jpg" alt="this is image">
+                    <span class="product-name">Fabric Kitchen cloth</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/wiper.jpg" alt="this is image">
+                    <span class="product-name">Kitchen Wiper</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household home_kitchen">
+                    <img class="product-image" src="img/products/household/spoon.jpg" alt="this is image">
+                    <span class="product-name">Spoon set</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+
+                <!-- Cleaning Supplies -->
+                <div class="flexY product household cleaning_supplies">
+                    <img class="product-image" src="img/products/household/galamop.jpg" alt="this is image">
+                    <span class="product-name">Gala Mop</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household cleaning_supplies">
+                    <img class="product-image" src="img/products/household/sinkBrush.jpg" alt="this is image">
+                    <span class="product-name">Sink Brush</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household cleaning_supplies">
+                    <img class="product-image" src="img/products/household/wiper1.jpg" alt="this is image">
+                    <span class="product-name">Gala Wiper</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household cleaning_supplies">
+                    <img class="product-image" src="img/products/household/colin.jpg" alt="this is image">
+                    <span class="product-name">Colin Glass Cleaner</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product household cleaning_supplies">
+                    <img class="product-image" src="img/products/household/dustbin.jpg" alt="this is image">
+                    <span class="product-name">Polyset Dustbin</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+            </div>
+
+        </section>
+    </div>
+    <script src="js/index.js"></script>
+    <div class="social">
+        <h1 class="center">Connect With Us</h1>
+        <div id="social-handles" class="flexX">
+            <img src="img/facebook.svg" alt="facebook.com"><img src="img/instagram.svg" alt="instagram.com"><img src="img/twitter.svg" alt="twitter.com"><img src="img/linkedin.svg" alt="linkedin.com"><img src="img/youtube.svg" alt="youtube.com">
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+    <footer class="footer flexY">
+        <div>copyright &copy; 2022 : OnlineMarket.com all rights reserved</div>
+
+    </footer>
+</body>
+
+</html>

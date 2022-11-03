@@ -1,0 +1,49 @@
+.flexX{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flexY{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn{
+    padding: 0.7em;
+    border: none;
+    color: black;
+    border-radius: 1rem;
+    transition: all 0.2s ease-in;
+}
+.btn2{
+    padding: 0.7em;
+    border: none;
+    color: black;
+    border-radius: 1rem;
+    transition: all 0.2s ease-in;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: yellow;
+    color: black;
+    cursor: pointer;
+}
+
+.d-none{
+    display: none;
+}
+
+.center{
+    text-align: center;
+}
+
+.m-auto{
+    margin: auto
+}
+
+
+

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6efd1a9509.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/template.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <title>Beverages</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="flexY">
+            <div id="top" class="flexX">
+                <div id="left-top" class="flexX">
+                    <span>About</span>
+                    <span>Customer Support</span>
+                </div>
+                <div id="right-top" class="flexX">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Login</span>
+                </div>
+            </div>
+            <div id="mid" class="flexX">
+                <a href="index.html"><img id="logo" src="img/logo.png" alt="" srcset=""></a>
+                <div class="search">
+                    <input type="text" id=search-product placeholder="search product">
+                    <button class="btn" type="submit">Search</button>
+                </div>
+                <div id="right-mid">
+                    <i class="fa-sharp fa-solid fa-location-dot"></i>
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count">0</span>
+                </div>
+            </div>
+        </header>
+        <nav id="nav" class="flexX">
+            <div class="nav-item"><a href="index.html">Deals</a> </div>
+            <div class="nav-item"> <a href="food.html">Food</a></div>
+            <div class="nav-item"><a href="beverages.html">Beverages</a></div>
+            <div class="nav-item"><a href="household.html">Household</a></div>
+            <div class="nav-item"><a href="personalcare.html">Personal Care</a></div>
+            <div class="nav-item"><a >Most Popular</a></div>
+            <div class="nav-item"><a >My Order</a></div>
+        </nav>
+
+        <section id="content" class="m-auto">
+            <div id="filter" class="flexY">
+                <div id="filter-child">
+                    <span>Filter:</span>
+                    <div onclick='show_product("tea")'>Tea</div>
+                    <div onclick='show_product("coffee")'>Coffee</div>
+                    <div onclick='show_product("drinks")'>Soft Drinks</div>
+                    <div onclick='show_product("beer")'>Beer</div>
+                    <div style="color: red; font-size:1.2rem;" onclick='show_product("product")'><b>Remove filter</b></div>
+                </div>
+            </div>
+            <div class="products flexX">
+                <!-- tea -->
+                <div class="flexY product beverages tea">
+                    <img class="product-image" src="img/products/beverages/taz_tea.jpg" alt="this is image">
+                    <span class="product-name">Taz Mahal Tea</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages tea">
+                    <img class="product-image" src="img/products/beverages/tata_tea.jpg" alt="this is image">
+                    <span class="product-name">Tata Tea Premium</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages tea">
+                    <img class="product-image" src="img/products/beverages/red_label.jpg" alt="this is image">
+                    <span class="product-name">Red Label</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages tea">
+                    <img class="product-image" src="img/products/beverages/tata_tea_gold.jpg" alt="this is image">
+                    <span class="product-name">Tata Tea Gold</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages tea">
+                    <img class="product-image" src="img/products/beverages/wagh_bakri.jpg" alt="this is image">
+                    <span class="product-name">Wagh Bakri Tea</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <!-- coffee -->
+                <div class="flexY product beverages coffee">
+                    <img class="product-image" src="img/products/beverages/bru_coffee.jpg" alt="this is image">
+                    <span class="product-name">BRU coffee</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages coffee">
+                    <img class="product-image" src="img/products/beverages/tata_coffee_gold.jpg" alt="this is image">
+                    <span class="product-name">Tata Gold Coffee</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages coffee">
+                    <img class="product-image" src="img/products/beverages/nescafe_coffee.jpg" alt="this is image">
+                    <span class="product-name">Nescafe Coffee</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages coffee">
+                    <img class="product-image" src="img/products/beverages/rage_coffee.jpg" alt="this is image">
+                    <span class="product-name">Rage Coffee</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages coffee">
+                    <img class="product-image" src="img/products/beverages/sleepy_owl_coffee.jpg" alt="this is image">
+                    <span class="product-name">Sleepy Owl Coffee</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+
+                <!-- Soft Drinks -->
+                <div class="flexY product beverages drinks">
+                    <img class="product-image" src="img/products/beverages/cocacola.jpg" alt="this is image">
+                    <span class="product-name">CocaCola</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages drinks">
+                    <img class="product-image" src="img/products/beverages/pepsi.jpg" alt="this is image">
+                    <span class="product-name">Pepsi</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages drinks">
+                    <img class="product-image" src="img/products/beverages/redbull.jpg" alt="this is image">
+                    <span class="product-name">Red Bull Energy Drink</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages drinks">
+                    <img class="product-image" src="img/products/beverages/thumbs_up.jpg" alt="this is image">
+                    <span class="product-name">Thumbs up</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages drinks">
+                    <img class="product-image" src="img/products/beverages/limca.jpg" alt="this is image">
+                    <span class="product-name">Limca</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+
+                <!-- beer -->
+                <div class="flexY product beverages beer">
+                    <img class="product-image" src="img/products/beverages/beer1.jpg" alt="this is image">
+                    <span class="product-name">Coolberg Cranberry</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages beer">
+                    <img class="product-image" src="img/products/beverages/beer2.jpg" alt="this is image">
+                    <span class="product-name">Kingfisher Radler Lemon</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages beer">
+                    <span class="product-tag">Best Deal</span>
+                    <img class="product-image" src="img/products/beverages/beer3.jpg" alt="this is image">
+                    <span class="product-name">Budweiser Green Apple Beer</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages beer">
+                    <span class="product-tag">Most Popular</span>
+                    <img class="product-image" src="img/products/beverages/beer4.jpg" alt="this is image">
+                    <span class="product-name">Kingfisher Radler Strawberry</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages beer">
+                    <img class="product-image" src="img/products/beverages/beer5.jpg" alt="this is image">
+                    <span class="product-name">Gunsberg Ginger Beer</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages tea">
+                    <img class="product-image" src="img/products/beverages/taz_tea.jpg" alt="this is image">
+                    <span class="product-name">Taz Mahal Tea</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages tea">
+                    <img class="product-image" src="img/products/beverages/tata_tea.jpg" alt="this is image">
+                    <span class="product-name">Tata Tea Premium</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages tea">
+                    <img class="product-image" src="img/products/beverages/red_label.jpg" alt="this is image">
+                    <span class="product-name">Red Label</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages tea">
+                    <img class="product-image" src="img/products/beverages/tata_tea_gold.jpg" alt="this is image">
+                    <span class="product-name">Tata Tea Gold</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages tea">
+                    <img class="product-image" src="img/products/beverages/wagh_bakri.jpg" alt="this is image">
+                    <span class="product-name">Wagh Bakri Tea</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <!-- coffee -->
+                <div class="flexY product beverages coffee">
+                    <img class="product-image" src="img/products/beverages/bru_coffee.jpg" alt="this is image">
+                    <span class="product-name">BRU coffee</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages coffee">
+                    <img class="product-image" src="img/products/beverages/tata_coffee_gold.jpg" alt="this is image">
+                    <span class="product-name">Tata Gold Coffee</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages coffee">
+                    <img class="product-image" src="img/products/beverages/nescafe_coffee.jpg" alt="this is image">
+                    <span class="product-name">Nescafe Coffee</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages coffee">
+                    <img class="product-image" src="img/products/beverages/rage_coffee.jpg" alt="this is image">
+                    <span class="product-name">Rage Coffee</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages coffee">
+                    <img class="product-image" src="img/products/beverages/sleepy_owl_coffee.jpg" alt="this is image">
+                    <span class="product-name">Sleepy Owl Coffee</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+
+                <!-- Soft Drinks -->
+                <div class="flexY product beverages drinks">
+                    <img class="product-image" src="img/products/beverages/cocacola.jpg" alt="this is image">
+                    <span class="product-name">CocaCola</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages drinks">
+                    <img class="product-image" src="img/products/beverages/pepsi.jpg" alt="this is image">
+                    <span class="product-name">Pepsi</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages drinks">
+                    <img class="product-image" src="img/products/beverages/redbull.jpg" alt="this is image">
+                    <span class="product-name">Red Bull Energy Drink</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages drinks">
+                    <img class="product-image" src="img/products/beverages/thumbs_up.jpg" alt="this is image">
+                    <span class="product-name">Thumbs up</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages drinks">
+                    <img class="product-image" src="img/products/beverages/limca.jpg" alt="this is image">
+                    <span class="product-name">Limca</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+
+                <!-- beer -->
+                <div class="flexY product beverages beer">
+                    <img class="product-image" src="img/products/beverages/beer1.jpg" alt="this is image">
+                    <span class="product-name">Coolberg Cranberry</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages beer">
+                    <img class="product-image" src="img/products/beverages/beer2.jpg" alt="this is image">
+                    <span class="product-name">Kingfisher Radler Lemon</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages beer">
+                    <span class="product-tag">Best Deal</span>
+                    <img class="product-image" src="img/products/beverages/beer3.jpg" alt="this is image">
+                    <span class="product-name">Budweiser Green Apple Beer</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages beer">
+                    <span class="product-tag">Most Popular</span>
+                    <img class="product-image" src="img/products/beverages/beer4.jpg" alt="this is image">
+                    <span class="product-name">Kingfisher Radler Strawberry</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages beer">
+                    <img class="product-image" src="img/products/beverages/beer5.jpg" alt="this is image">
+                    <span class="product-name">Gunsberg Ginger Beer</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages tea">
+                    <img class="product-image" src="img/products/beverages/taz_tea.jpg" alt="this is image">
+                    <span class="product-name">Taz Mahal Tea</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages tea">
+                    <img class="product-image" src="img/products/beverages/tata_tea.jpg" alt="this is image">
+                    <span class="product-name">Tata Tea Premium</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages tea">
+                    <img class="product-image" src="img/products/beverages/red_label.jpg" alt="this is image">
+                    <span class="product-name">Red Label</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages tea">
+                    <img class="product-image" src="img/products/beverages/tata_tea_gold.jpg" alt="this is image">
+                    <span class="product-name">Tata Tea Gold</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages tea">
+                    <img class="product-image" src="img/products/beverages/wagh_bakri.jpg" alt="this is image">
+                    <span class="product-name">Wagh Bakri Tea</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <!-- coffee -->
+                <div class="flexY product beverages coffee">
+                    <img class="product-image" src="img/products/beverages/bru_coffee.jpg" alt="this is image">
+                    <span class="product-name">BRU coffee</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages coffee">
+                    <img class="product-image" src="img/products/beverages/tata_coffee_gold.jpg" alt="this is image">
+                    <span class="product-name">Tata Gold Coffee</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages coffee">
+                    <img class="product-image" src="img/products/beverages/nescafe_coffee.jpg" alt="this is image">
+                    <span class="product-name">Nescafe Coffee</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages coffee">
+                    <img class="product-image" src="img/products/beverages/rage_coffee.jpg" alt="this is image">
+                    <span class="product-name">Rage Coffee</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages coffee">
+                    <img class="product-image" src="img/products/beverages/sleepy_owl_coffee.jpg" alt="this is image">
+                    <span class="product-name">Sleepy Owl Coffee</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+
+                <!-- Soft Drinks -->
+                <div class="flexY product beverages drinks">
+                    <img class="product-image" src="img/products/beverages/cocacola.jpg" alt="this is image">
+                    <span class="product-name">CocaCola</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages drinks">
+                    <img class="product-image" src="img/products/beverages/pepsi.jpg" alt="this is image">
+                    <span class="product-name">Pepsi</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages drinks">
+                    <img class="product-image" src="img/products/beverages/redbull.jpg" alt="this is image">
+                    <span class="product-name">Red Bull Energy Drink</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages drinks">
+                    <img class="product-image" src="img/products/beverages/thumbs_up.jpg" alt="this is image">
+                    <span class="product-name">Thumbs up</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages drinks">
+                    <img class="product-image" src="img/products/beverages/limca.jpg" alt="this is image">
+                    <span class="product-name">Limca</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+
+                <!-- beer -->
+                <div class="flexY product beverages beer">
+                    <img class="product-image" src="img/products/beverages/beer1.jpg" alt="this is image">
+                    <span class="product-name">Coolberg Cranberry</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages beer">
+                    <img class="product-image" src="img/products/beverages/beer2.jpg" alt="this is image">
+                    <span class="product-name">Kingfisher Radler Lemon</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages beer">
+                    <span class="product-tag">Best Deal</span>
+                    <img class="product-image" src="img/products/beverages/beer3.jpg" alt="this is image">
+                    <span class="product-name">Budweiser Green Apple Beer</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages beer">
+                    <span class="product-tag">Most Popular</span>
+                    <img class="product-image" src="img/products/beverages/beer4.jpg" alt="this is image">
+                    <span class="product-name">Kingfisher Radler Strawberry</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product beverages beer">
+                    <img class="product-image" src="img/products/beverages/beer5.jpg" alt="this is image">
+                    <span class="product-name">Gunsberg Ginger Beer</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+            </div>
+
+        </section>
+    </div>
+    <script src="js/index.js"></script>
+    <div class="social">
+        <h1 class="center">Connect With Us</h1>
+        <div id="social-handles" class="flexX">
+            <img src="img/facebook.svg" alt="facebook.com"><img src="img/instagram.svg" alt="instagram.com"><img src="img/twitter.svg" alt="twitter.com"><img src="img/linkedin.svg" alt="linkedin.com"><img src="img/youtube.svg" alt="youtube.com">
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+    <footer class="footer flexY">
+        <div>copyright &copy; 2022 : OnlineMarket.com all rights reserved</div>
+
+    </footer>
+</body>
+
+</html>

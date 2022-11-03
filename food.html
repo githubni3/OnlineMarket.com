@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6efd1a9509.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/template.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <title>OnlineMarket</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="flexY">
+            <div id="top" class="flexX">
+                <div id="left-top" class="flexX">
+                    <span>About</span>
+                    <span>Customer Support</span>
+                </div>
+                <div id="right-top" class="flexX">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Login</span>
+                </div>
+            </div>
+            <div id="mid" class="flexX">
+                <a href="index.html"><img id="logo" src="img/logo.png" alt="" srcset=""></a>
+                <div class="search">
+                    <input type="text" id=search-product placeholder="search product">
+                    <button class="btn" type="submit">Search</button>
+                </div>
+                <div id="right-mid">
+                    <i class="fa-sharp fa-solid fa-location-dot"></i>
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count">0</span>
+                </div>
+            </div>
+        </header>
+        <nav id="nav" class="flexX">
+            <div class="nav-item"><a href="index.html">Deals</a> </div>
+            <div class="nav-item"> <a href="food.html">Food</a></div>
+            <div class="nav-item"><a href="beverages.html">Beverages</a></div>
+            <div class="nav-item"><a href="household.html">Household</a></div>
+            <div class="nav-item"><a href="personalcare.html">Personal Care</a></div>
+            <div class="nav-item"><a >Most Popular</a></div>
+            <div class="nav-item"><a >My Order</a></div>
+        </nav>
+
+        <section id="content" class="m-auto">
+            <div id="filter" class="flexY">
+                <div id="filter-child">
+                    <span>Filter:</span>
+                    <div onclick='show_product("vegetable")'>Vegetables</div>
+                    <div onclick='show_product("fruit")'>Fruit</div>
+                    <div onclick='show_product("meat")'>Meat & Poultry</div>
+                    <div onclick='show_product("Seafood")'>Fish & Seafood</div>
+                    <div onclick='show_product("dairy")'>Dairy & Eggs</div>
+                    <div onclick='show_product("bakery")'>Bakery</div>
+                    <div onclick='show_product("grains")'>Pastas & Grains</div>
+                    <div onclick='show_product("Snacks")'>Cereals & Snacks</div>
+                    <div style="color: red; font-size:1.2rem;" onclick='show_product("product")'><b>Remove filter</b></div>
+                </div>
+            </div>
+            <div class="products flexX">
+                <!-- simple-product template -->
+                <!-- <div class="flexY product food vegetable">
+                    <img class="product-image" src="img/products/food/cucumber.jpg" alt="this is image">
+                    <span class="product-name">Greenhouse Cucumber</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div> -->
+                <!-- dest deal tag -->
+                <!-- <span class="product-tag">Best Deal</span> -->
+                <!-- most popular tag -->
+                <!-- <span class="product-tag">Most Popular</span> -->
+                <!-- vegetables -->
+                <div class="flexY product food vegetable">
+                    <img class="product-image" src="img/products/food/cucumber.jpg" alt="this is image">
+                    <span class="product-name">Greenhouse Cucumber</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food vegetable">
+                    <span class="product-tag">Most Popular</span>
+                    <img class="product-image" src="img/products/food/tomato.jpg" alt="this is image">
+                    <span class="product-name">Beefsteak Tomatoes, Large</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food vegetable">
+                    <img class="product-image" src="img/products/food/Red_Greenhouse_Bell_Pepper.jpg"
+                        alt="this is image">
+                    <span class="product-name">Red Greenhouse Bell Pepper</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food vegetable">
+                    <img class="product-image" src="img/products/food/carrot.jpg" alt="this is image">
+                    <span class="product-name">Lancaster Farm Fresh Carrots</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food vegetable">
+                    <span class="product-tag">Best Deal</span>
+                    <img class="product-image" src="img/products/food/Hass_Avocados_Ready-to-Eat.jpg"
+                        alt="this is image">
+                    <span class="product-name">Hass Avocados, Ready-to-Eat</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <!-- fruits -->
+                <div class="flexY product food fruit">
+                    <img class="product-image" src="img/products/food/Banana_Bunch.jpg" alt="this is image">
+                    <span class="product-name">Banana Bunch</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food fruit">
+                    <span class="product-tag">Most Popular</span>
+                    <img class="product-image" src="img/products/food/Navel_Orange.jpg" alt="this is image">
+                    <span class="product-name">Navel Orange</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food fruit">
+                    <span class="product-tag">Best Deal</span>
+                    <img class="product-image" src="img/products/food/Strawberries.jpg" alt="this is image">
+                    <span class="product-name">Strawberries</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food fruit">
+                    <img class="product-image" src="img/products/food/Ripe_Apple.jpg" alt="this is image">
+                    <span class="product-name">Ripe Apple</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food fruit">
+                    <img class="product-image" src="img/products/food/Bartlett Pear.jpg" alt="this is image">
+                    <span class="product-name">Bartlett Pear</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+
+                <!-- meat & poultry -->
+                <div class="flexY product food meat">
+                    <img class="product-image" src="img/products/food/Steak A-La-Minute.jpg" alt="this is image">
+                    <span class="product-name">Steak A-La-Minute</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food meat">
+                    <span class="product-tag"></span>
+                    <img class="product-image" src="img/products/food/Boneless Chicken Breasts.jpg" alt="this is image">
+                    <span class="product-name">Boneless Chicken Breasts</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food meat">
+                    <img class="product-image" src="img/products/food/Beef Fillet.jpg" alt="this is image">
+                    <span class="product-name">Beef Fillet</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food meat">
+                    <span class="product-tag">Most Popular</span>
+                    <img class="product-image" src="img/products/food/Italian Chicken Sausage.jpg" alt="this is image">
+                    <span class="product-name">Italian Chicken Sausage</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food meat">
+                    <span class="product-tag">Best Deal</span>
+                    <img class="product-image" src="img/products/food/Boneless Chicken Thighs.jpg" alt="this is image">
+                    <span class="product-name">Boneless Chicken Thighs</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+
+                <!-- Fish & Seafood -->
+                <div class="flexY product food Seafood">
+                    <img class="product-image" src="img/products/food/Wild Domestic Shrimps.jpg" alt="this is image">
+                    <span class="product-name">Wild Domestic Shrimps</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food Seafood">
+                    <img class="product-image" src="img/products/food/Iceberg Mussels.jpg" alt="this is image">
+                    <span class="product-name">Iceberg Mussels</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food Seafood">
+                    <span class="product-tag">Best Deal</span>
+                    <img class="product-image" src="img/products/food/Tuna Steak Fillet.jpg" alt="this is image">
+                    <span class="product-name">Tuna Steak Fillet</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food Seafood">
+                    <span class="product-tag">Most Popular</span>
+                    <img class="product-image" src="img/products/food/King Salmon Fillet.jpg" alt="this is image">
+                    <span class="product-name">King Salmon Fillet</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food Seafood">
+                    <img class="product-image" src="img/products/food/Norwegian Halibut Fillet.jpg" alt="this is image">
+                    <span class="product-name">Norwegian Halibut Fillet</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+
+                <!-- dairy & eggs -->
+                <div class="flexY product food dairy">
+                    <img class="product-image" src="img/products/food/European Style Butter.jpg" alt="this is image">
+                    <span class="product-name">European Style Butter</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food dairy">
+                    <img class="product-image" src="img/products/food/Whole Milk Gallon.jpg" alt="this is image">
+                    <span class="product-name">Whole Milk Gallon</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food dairy">
+                    <span class="product-tag">Best Deal</span>
+                    <img class="product-image" src="img/products/food/Reduced Fat Milk.jpg" alt="this is image">
+                    <span class="product-name">2% Reduced Fat Milk</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food dairy">
+                    <span class="product-tag">Most Popular</span>
+                    <img class="product-image" src="img/products/food/Chocolate Milk Carton.jpg" alt="this is image">
+                    <span class="product-name">Chocolate Milk Carton</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food dairy">
+                    <img class="product-image" src="img/products/food/Natural Large White Eggs.jpg" alt="this is image">
+                    <span class="product-name">Natural Large White Eggs</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+
+                <!-- bakery -->
+                <div class="flexY product food bakery">
+                    <img class="product-image" src="img/products/food/Country White Bread.jpg" alt="this is image">
+                    <span class="product-name">Country White Bread</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food bakery">
+                    <img class="product-image" src="img/products/food/Banana Chocolate Chip Pound Cake.jpg"
+                        alt="this is image">
+                    <span class="product-name">Banana Chocolate Chip Pound Cake</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food bakery">
+                    <span class="product-tag">Best Deal</span>
+                    <img class="product-image" src="img/products/food/Soft-Baked Chocolate Chunk Cookies.jpg"
+                        alt="this is image">
+                    <span class="product-name">Soft-Baked Chocolate Chunk Cookies</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food bakery">
+                    <span class="product-tag">Most Popular</span>
+                    <img class="product-image" src="img/products/food/Chocolate Fudge Brownies.jpg" alt="this is image">
+                    <span class="product-name">Chocolate Fudge Brownies</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food bakery">
+                    <img class="product-image" src="img/products/food/Oven-Ready Chocolate Croissants.jpg"
+                        alt="this is image">
+                    <span class="product-name">Oven-Ready Chocolate Croissants</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+
+                <!-- pastas and grains -->
+                <div class="flexY product food grains">
+                    <img class="product-image" src="img/products/food/Orecchiette Shaped Pasta.jpg" alt="this is image">
+                    <span class="product-name">Orecchiette Shaped Pasta</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food grains">
+                    <span class="product-tag">Most Popular</span>
+                    <img class="product-image" src="img/products/food/Spaghetti.jpg" alt="this is image">
+                    <span class="product-name">Spaghetti</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food grains">
+                    <span class="product-tag">Best Deal</span>
+                    <img class="product-image" src="img/products/food/Organic Brown Rice.jpg" alt="this is image">
+                    <span class="product-name">Organic Brown Rice</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food grains">
+                    <img class="product-image" src="img/products/food/Organic Black Rice.jpg" alt="this is image">
+                    <span class="product-name">Organic Black Rice</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food grains">
+                    <img class="product-image" src="img/products/food/Long Grain Basmati Rice.jpg" alt="this is image">
+                    <span class="product-name">Long Grain Basmati Rice</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+
+                <!-- Cereals & Snacks -->
+                <div class="flexY product food Snacks">
+                    <span class="product-tag">Most Popular</span>
+                    <img class="product-image" src="img/products/food/Corn Flakes Cereal.jpg" alt="this is image">
+                    <span class="product-name">Corn Flakes Cereal</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food Snacks">
+                    <img class="product-image" src="img/products/food/Organic Chocolate Cereal.jpg" alt="this is image">
+                    <span class="product-name">Organic Chocolate Cereal</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food Snacks">
+                    <img class="product-image" src="img/products/food/Ice Cream Variety Pack.jpg" alt="this is image">
+                    <span class="product-name">Ice Cream Variety Pack</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food Snacks">
+                    <span class="product-tag">Best Deal</span>
+                    <img class="product-image" src="img/products/food/Oats and Honey Granola Cereal.jpg"
+                        alt="this is image">
+                    <span class="product-name">Oats and Honey Granola Cereal</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food Snacks">
+                    <img class="product-image" src="img/products/food/Dark Chocolate Bar.jpg" alt="this is image">
+                    <span class="product-name">Dark Chocolate Bar</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+
+
+                <!-- vegetables -->
+                <div class="flexY product food vegetable">
+                    <img class="product-image" src="img/products/food/cucumber.jpg" alt="this is image">
+                    <span class="product-name">Greenhouse Cucumber</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food vegetable">
+                    <span class="product-tag">Most Popular</span>
+                    <img class="product-image" src="img/products/food/tomato.jpg" alt="this is image">
+                    <span class="product-name">Beefsteak Tomatoes, Large</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food vegetable">
+                    <img class="product-image" src="img/products/food/Red_Greenhouse_Bell_Pepper.jpg"
+                        alt="this is image">
+                    <span class="product-name">Red Greenhouse Bell Pepper</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food vegetable">
+                    <img class="product-image" src="img/products/food/carrot.jpg" alt="this is image">
+                    <span class="product-name">Lancaster Farm Fresh Carrots</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food vegetable">
+                    <span class="product-tag">Best Deal</span>
+                    <img class="product-image" src="img/products/food/Hass_Avocados_Ready-to-Eat.jpg"
+                        alt="this is image">
+                    <span class="product-name">Hass Avocados, Ready-to-Eat</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <!-- fruits -->
+                <div class="flexY product food fruit">
+                    <img class="product-image" src="img/products/food/Banana_Bunch.jpg" alt="this is image">
+                    <span class="product-name">Banana Bunch</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food fruit">
+                    <span class="product-tag">Most Popular</span>
+                    <img class="product-image" src="img/products/food/Navel_Orange.jpg" alt="this is image">
+                    <span class="product-name">Navel Orange</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food fruit">
+                    <span class="product-tag">Best Deal</span>
+                    <img class="product-image" src="img/products/food/Strawberries.jpg" alt="this is image">
+                    <span class="product-name">Strawberries</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food fruit">
+                    <img class="product-image" src="img/products/food/Ripe_Apple.jpg" alt="this is image">
+                    <span class="product-name">Ripe Apple</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food fruit">
+                    <img class="product-image" src="img/products/food/Bartlett Pear.jpg" alt="this is image">
+                    <span class="product-name">Bartlett Pear</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+
+                <!-- meat & poultry -->
+                <div class="flexY product food meat">
+                    <img class="product-image" src="img/products/food/Steak A-La-Minute.jpg" alt="this is image">
+                    <span class="product-name">Steak A-La-Minute</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food meat">
+                    <span class="product-tag"></span>
+                    <img class="product-image" src="img/products/food/Boneless Chicken Breasts.jpg" alt="this is image">
+                    <span class="product-name">Boneless Chicken Breasts</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food meat">
+                    <img class="product-image" src="img/products/food/Beef Fillet.jpg" alt="this is image">
+                    <span class="product-name">Beef Fillet</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food meat">
+                    <span class="product-tag">Most Popular</span>
+                    <img class="product-image" src="img/products/food/Italian Chicken Sausage.jpg" alt="this is image">
+                    <span class="product-name">Italian Chicken Sausage</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food meat">
+                    <span class="product-tag">Best Deal</span>
+                    <img class="product-image" src="img/products/food/Boneless Chicken Thighs.jpg" alt="this is image">
+                    <span class="product-name">Boneless Chicken Thighs</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+
+                <!-- Fish & Seafood -->
+                <div class="flexY product food Seafood">
+                    <img class="product-image" src="img/products/food/Wild Domestic Shrimps.jpg" alt="this is image">
+                    <span class="product-name">Wild Domestic Shrimps</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food Seafood">
+                    <img class="product-image" src="img/products/food/Iceberg Mussels.jpg" alt="this is image">
+                    <span class="product-name">Iceberg Mussels</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food Seafood">
+                    <span class="product-tag">Best Deal</span>
+                    <img class="product-image" src="img/products/food/Tuna Steak Fillet.jpg" alt="this is image">
+                    <span class="product-name">Tuna Steak Fillet</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food Seafood">
+                    <span class="product-tag">Most Popular</span>
+                    <img class="product-image" src="img/products/food/King Salmon Fillet.jpg" alt="this is image">
+                    <span class="product-name">King Salmon Fillet</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food Seafood">
+                    <img class="product-image" src="img/products/food/Norwegian Halibut Fillet.jpg" alt="this is image">
+                    <span class="product-name">Norwegian Halibut Fillet</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+
+                <!-- dairy & eggs -->
+                <div class="flexY product food dairy">
+                    <img class="product-image" src="img/products/food/European Style Butter.jpg" alt="this is image">
+                    <span class="product-name">European Style Butter</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food dairy">
+                    <img class="product-image" src="img/products/food/Whole Milk Gallon.jpg" alt="this is image">
+                    <span class="product-name">Whole Milk Gallon</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food dairy">
+                    <span class="product-tag">Best Deal</span>
+                    <img class="product-image" src="img/products/food/Reduced Fat Milk.jpg" alt="this is image">
+                    <span class="product-name">2% Reduced Fat Milk</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food dairy">
+                    <span class="product-tag">Most Popular</span>
+                    <img class="product-image" src="img/products/food/Chocolate Milk Carton.jpg" alt="this is image">
+                    <span class="product-name">Chocolate Milk Carton</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food dairy">
+                    <img class="product-image" src="img/products/food/Natural Large White Eggs.jpg" alt="this is image">
+                    <span class="product-name">Natural Large White Eggs</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+
+                <!-- bakery -->
+                <div class="flexY product food bakery">
+                    <img class="product-image" src="img/products/food/Country White Bread.jpg" alt="this is image">
+                    <span class="product-name">Country White Bread</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food bakery">
+                    <img class="product-image" src="img/products/food/Banana Chocolate Chip Pound Cake.jpg"
+                        alt="this is image">
+                    <span class="product-name">Banana Chocolate Chip Pound Cake</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food bakery">
+                    <span class="product-tag">Best Deal</span>
+                    <img class="product-image" src="img/products/food/Soft-Baked Chocolate Chunk Cookies.jpg"
+                        alt="this is image">
+                    <span class="product-name">Soft-Baked Chocolate Chunk Cookies</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food bakery">
+                    <span class="product-tag">Most Popular</span>
+                    <img class="product-image" src="img/products/food/Chocolate Fudge Brownies.jpg" alt="this is image">
+                    <span class="product-name">Chocolate Fudge Brownies</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food bakery">
+                    <img class="product-image" src="img/products/food/Oven-Ready Chocolate Croissants.jpg"
+                        alt="this is image">
+                    <span class="product-name">Oven-Ready Chocolate Croissants</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+
+                <!-- pastas and grains -->
+                <div class="flexY product food grains">
+                    <img class="product-image" src="img/products/food/Orecchiette Shaped Pasta.jpg" alt="this is image">
+                    <span class="product-name">Orecchiette Shaped Pasta</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food grains">
+                    <span class="product-tag">Most Popular</span>
+                    <img class="product-image" src="img/products/food/Spaghetti.jpg" alt="this is image">
+                    <span class="product-name">Spaghetti</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food grains">
+                    <span class="product-tag">Best Deal</span>
+                    <img class="product-image" src="img/products/food/Organic Brown Rice.jpg" alt="this is image">
+                    <span class="product-name">Organic Brown Rice</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food grains">
+                    <img class="product-image" src="img/products/food/Organic Black Rice.jpg" alt="this is image">
+                    <span class="product-name">Organic Black Rice</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food grains">
+                    <img class="product-image" src="img/products/food/Long Grain Basmati Rice.jpg" alt="this is image">
+                    <span class="product-name">Long Grain Basmati Rice</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+
+                <!-- Cereals & Snacks -->
+                <div class="flexY product food Snacks">
+                    <span class="product-tag">Most Popular</span>
+                    <img class="product-image" src="img/products/food/Corn Flakes Cereal.jpg" alt="this is image">
+                    <span class="product-name">Corn Flakes Cereal</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food Snacks">
+                    <img class="product-image" src="img/products/food/Organic Chocolate Cereal.jpg" alt="this is image">
+                    <span class="product-name">Organic Chocolate Cereal</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food Snacks">
+                    <img class="product-image" src="img/products/food/Ice Cream Variety Pack.jpg" alt="this is image">
+                    <span class="product-name">Ice Cream Variety Pack</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food Snacks">
+                    <span class="product-tag">Best Deal</span>
+                    <img class="product-image" src="img/products/food/Oats and Honey Granola Cereal.jpg"
+                        alt="this is image">
+                    <span class="product-name">Oats and Honey Granola Cereal</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+                <div class="flexY product food Snacks">
+                    <img class="product-image" src="img/products/food/Dark Chocolate Bar.jpg" alt="this is image">
+                    <span class="product-name">Dark Chocolate Bar</span>
+                    <span class="product-price">20Rs/kg</span>
+                    <input type="number" placeholder="1" class="product-quantity center">
+                    <span class="product-addToCart">Add to Cart</span>
+                </div>
+            </div>
+
+        </section>
+    </div>
+    <script src="js/index.js"></script>
+    <div class="social">
+        <h1 class="center">Connect With Us</h1>
+        <div id="social-handles" class="flexX">
+            <img src="img/facebook.svg" alt="facebook.com"><img src="img/instagram.svg" alt="instagram.com"><img src="img/twitter.svg" alt="twitter.com"><img src="img/linkedin.svg" alt="linkedin.com"><img src="img/youtube.svg" alt="youtube.com">
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+    <footer class="footer flexY">
+        <div>copyright &copy; 2022 : OnlineMarket.com all rights reserved</div>
+
+    </footer>
+</body>
+
+</html>

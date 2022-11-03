@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#home-content{
+    background-color: aliceblue;
+    width: 80vw;
+    min-height: 80vh;
+    margin: auto;
+}
+
+.facilities{
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.facilities>div{
+    border: 2px solid yellowgreen;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.facilities>div:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#delivery>*, #pickup>*, #help>*{
+    padding: 1rem;
+}
+
+#home-img{
+    position: relative;
+    margin-top: 1rem;
+}
+
+#home-img img{
+    width: 80vw;
+    height: auto;
+}
+
+#home-img div{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* #order-img img{
+    width: 50rem;
+    height: 50rem;
+} */
+#img-2 img{
+    width: 80vw;
+}
+.cards{
+    justify-content: space-evenly;
+    margin: 2rem;
+    flex-wrap: wrap;
+}
+
+.card{
+    border: 2px solid greenyellow;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.card:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+@media screen and (max-width: 1200px){
+    #home-img div{
+        top: 25%;
+        left: 20%;
+        font-size: 2rem;
+    }
+}
